@@ -6,11 +6,7 @@ robot= Robot()
 keyboard = Keyboard()
 keyboard.enable(timestep)
 
-forward = Motion('../../motions/wave.motion')
-
-
-def startMotion(motion):
-    motion.play()
+wave = Motion('../../motions/wave.motion')
    
 def printMessages():
     print('press up to wave')
@@ -24,5 +20,5 @@ while robot.step(timestep) != -1:
     key = keyboard.getKey()  
     
     if key == Keyboard.UP:
-        startMotion(forward)
+        wave.play()
    
